@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from setuptools import setup
-from setuptools import find_packages
+from setuptools import find_packages, setup
+
 import ernie
 
 setup(
@@ -30,9 +30,9 @@ setup(
     ],
     python_requires=">=3.6",
     install_requires=[
-        'transformers>=4.24.0, <5.0.0',
-        'scikit-learn>=1.2.1, <2.0.0',
-        'pandas>=1.5.3, <2.0.0',
-        'tensorflow>=2.5.1, <2.11.0',
-        'py-cpuinfo>=9.0.0, <10.0.0',
+        'tf-keras',
+        'transformers',
+        'scikit-learn',
+        'pandas',
+        'py-cpuinfo',
     ])

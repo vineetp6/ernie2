@@ -1,29 +1,22 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import numpy as np
-import pandas as pd
-from transformers import (
-    AutoTokenizer,
-    AutoModel,
-    AutoConfig,
-    TFAutoModelForSequenceClassification,
-)
-from tensorflow import keras
-from sklearn.model_selection import train_test_split
 import logging
 import time
+
+import numpy as np
+import pandas as pd
+import tf_keras as keras
+from sklearn.model_selection import train_test_split
+from transformers import (AutoConfig, AutoModel, AutoTokenizer,
+                          TFAutoModelForSequenceClassification)
+
+from .aggregation_strategies import AggregationStrategies  # noqa: F401
+from .aggregation_strategies import AggregationStrategy
+from .helper import copy_dir, get_features, make_dir, remove_dir, softmax
 from .models import Models, ModelsByFamily  # noqa: F401
-from .split_strategies import (  # noqa: F401
-    SplitStrategy,
-    SplitStrategies,
-    RegexExpressions,
-)
-from .aggregation_strategies import (  # noqa: F401
-    AggregationStrategy,
-    AggregationStrategies,
-)
-from .helper import (get_features, softmax, remove_dir, make_dir, copy_dir)
+from .split_strategies import (RegexExpressions, SplitStrategies,  # noqa: F401
+                               SplitStrategy)
 
 AUTOSAVE_PATH = './ernie-autosave/'
 

@@ -1,14 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from .ernie import *  # noqa: F401, F403
-from tensorflow.python.client import device_lib
 import logging
 
-__version__ = '1.2308.1'
+from tensorflow.python.client import device_lib
+
+from .ernie import *  # noqa: F401, F403
+
+__version__ = '1.2405.0'
 
 logging.getLogger().setLevel(logging.WARNING)
-logging.getLogger("transformers.tokenization_utils").setLevel(logging.ERROR)
+logging.getLogger('transformers.tokenization_utils').setLevel(logging.ERROR)
 logging.basicConfig(
     format='%(asctime)-15s [%(levelname)s] %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S'

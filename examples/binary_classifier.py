@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from ernie import SentenceClassifier, Models
 import pandas as pd
+
+from ernie import Models, SentenceClassifier
 
 tuples = [
     ("This is a positive example. I'm very happy today.", 1),

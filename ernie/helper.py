@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from tensorflow import data, TensorShape, int64, int32
 from math import exp
 from os import makedirs
-from shutil import rmtree, move, copytree
+from shutil import copytree, move, rmtree
+
+from tensorflow import TensorShape, data, int32, int64
 
 
 def get_features(
